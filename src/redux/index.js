@@ -1,5 +1,7 @@
-import store from "./store";
 export * from './chartsSlice'
-export { store }
 
+import store from "./store";
+export { store }
 export default store
+
+export * from "./bindActionCreators"

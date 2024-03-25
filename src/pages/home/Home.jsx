@@ -10,14 +10,14 @@ const Home = () => {
     const userChart = useSelector((state) => state.charts.userChart)
 
     return (
-        <div className={HomeCSS.home}>
+        <>
             <FeaturedInfo />
             <Chart title="User Analytics" data={userChart} grid />
             <div className={HomeCSS.homeWidgets}>
                 <WidgetSm />
                 <WidgetLg />
             </div>
-        </div>
+        </>
     )
 }
 

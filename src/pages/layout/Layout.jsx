@@ -8,7 +8,9 @@ const Layout = () => {
         <section className={LayoutCSS.container}>
             <Topbar />
             <Sidebar />
-            <Outlet />
+            <div>
+                <Outlet />
+            </div>
         </section>
     )
 }

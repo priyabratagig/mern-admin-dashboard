@@ -5,6 +5,7 @@ import Page404 from './pages/page404/Page404';
 import Layout from './pages/layout/Layout';
 import Home from './pages/home/Home';
 import './App.css';
+import UserList from './pages/userlist/UserList';
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -12,6 +13,7 @@ const routes = createBrowserRouter(
       <Route index element={<Navigate to='/home' />} />
       <Route path='/' element={<Layout />}>
         <Route path='home' element={<Home />} />
+        <Route path='users' element={<UserList />} />
       </Route>
       <Route path='*' element={<Page404 />} />
     </Route>
