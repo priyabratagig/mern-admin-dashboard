@@ -12,7 +12,7 @@
   outline: none;
   list-style: none;
   text-decoration: none;
-  color: initial;
+  color: inherit;
 }
 
 :root {
