@@ -48,12 +48,12 @@ const Sidebar = () => {
                                 Users
                             </li>
                         </Link>
-                        <a to="/products" className={SidebarCSS.link}>
+                        <Link to="/products" className={SidebarCSS.link}>
                             <li className={SidebarCSS.sidebarListItem}>
                                 <Storefront className={SidebarCSS.sidebarIcon} />
                                 Products
                             </li>
-                        </a>
+                        </Link>
                         <li className={SidebarCSS.sidebarListItem}>
                             <AttachMoney className={SidebarCSS.sidebarIcon} />
                             Transactions

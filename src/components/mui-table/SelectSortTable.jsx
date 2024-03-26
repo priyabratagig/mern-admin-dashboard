@@ -180,7 +180,7 @@ function EnhancedTable(props) {
                             headCells={headCells}
                         />
                         <TableBody>
-                            {visibleRows.map((row, index) => {
+                            {visibleRows.map((row) => {
 
                                 return (
                                     <TableRow

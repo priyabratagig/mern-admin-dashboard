@@ -19,8 +19,13 @@ const getUsers = () => {
     return users.map(() => {
         return {
             name: faker.person.fullName(),
-            title: faker.person.jobTitle(),
+            username: faker.internet.userName(),
             email: faker.internet.email(),
+            phone: faker.string.numeric({ length: 10, min: 6000000000, max: 9999999999 }),
+            title: faker.person.jobTitle(),
+            city: faker.location.city(),
+            country: faker.location.country(),
+            dob: faker.date.past({ years: 60 }).toISOString().split("T")[0],
             active: "active",
             transactions: faker.finance.amount({ min: 500, max: 5000, precision: 0.01 }),
         }
@@ -36,11 +41,6 @@ const usersSlice = createSlice(
         initialState: {
             newUsers,
             users,
-            loggedInUser: {
-                name: faker.person.fullName(),
-                title: faker.person.jobTitle(),
-                email: faker.internet.email()
-            }
         },
         reducers: {
             setNewUsers: (state, action) => {
@@ -48,9 +48,6 @@ const usersSlice = createSlice(
             },
             setUsers: (state, action) => {
                 state.users = action.payload
-            },
-            setLoggedInUser: (state, action) => {
-                state.loggedInUser = action.payload
             }
         }
     }

@@ -5,7 +5,7 @@ import { setUsers } from '../../redux'
 import Avatar, { genConfig } from "react-nice-avatar";
 import SelectSortTable from "../../components/mui-table/SelectSortTable";
 import UserListCSS from "./userlist.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function UserList() {
     const users = useSelector((state) => state.users.users)
@@ -22,26 +22,26 @@ export default function UserList() {
     }
 
     const headCells = [
-        { id: "user", numeric: false, disablePadding: false, label: "User", style: { maxWidth: "20rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
-        { id: "email", numeric: false, disablePadding: false, label: "Email", style: { maxWidth: "20rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
-        { id: "active", numeric: false, disablePadding: false, label: "active", style: { maxWidth: "12rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
-        { id: "transaction", numeric: true, disablePadding: false, label: "Transaction Volume", style: { maxWidth: "16rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
-        { id: "action", numeric: false, disablePadding: false, label: "Action", style: { maxWidth: "15rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
+        { id: "User", numeric: false, disablePadding: false, label: "User", style: { maxWidth: "20rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
+        { id: "Email", numeric: false, disablePadding: false, label: "Email", style: { maxWidth: "20rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
+        { id: "Active", numeric: false, disablePadding: false, label: "active", style: { maxWidth: "12rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
+        { id: "Transaction", numeric: true, disablePadding: false, label: "Transaction Volume", style: { maxWidth: "16rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
+        { id: "Action", numeric: false, disablePadding: false, label: "Action", style: { maxWidth: "15rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },
     ]
 
     const body = filterdUsers.map((user) => {
         const avatarConfig = genConfig(user.email)
         return {
-            user: (
+            User: (
                 <div className={UserListCSS.userListUser}>
                     <Avatar {...avatarConfig} className={UserListCSS.userListImg} />
                     {user.name}
                 </div>
             ),
-            email: user.email,
-            active: user.active,
-            transaction: user.transactions,
-            action: (
+            Email: user.email,
+            Active: user.active,
+            Transaction: user.transactions,
+            Action: (
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <Link to={"/user/" + user.email}>
                         <button className={UserListCSS.userListEdit}>Edit</button>

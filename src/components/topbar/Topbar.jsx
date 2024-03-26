@@ -2,9 +2,10 @@ import { NotificationsNone, Language, Settings } from "@mui/icons-material";
 import TopbarCSS from "./topbar.module.css";
 import { useSelector } from "react-redux";
 import Avatar, { genConfig } from "react-nice-avatar";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
-    const loggedInUser = useSelector((state) => state.users.loggedInUser)
+    const loggedInUser = useSelector((state) => state.users.users)[0]
     const avatarConfig = genConfig(loggedInUser.email)
 
     return (
@@ -25,7 +26,9 @@ const Topbar = () => {
                     <div className={TopbarCSS.topbarIconContainer}>
                         <Settings fontSize="large" />
                     </div>
-                    <Avatar {...avatarConfig} className={TopbarCSS.topAvatar} />
+                    <Link to={'/user/' + loggedInUser.email}>
+                        <Avatar {...avatarConfig} className={TopbarCSS.topAvatar} />
+                    </Link>
                 </div>
             </div>
         </div>
