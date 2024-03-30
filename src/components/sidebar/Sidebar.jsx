@@ -4,64 +4,73 @@ import {
     TrendingUp,
     PermIdentity,
     Storefront,
-    AttachMoney,
-    BarChart,
     MailOutline,
     DynamicFeed,
     ChatBubbleOutline,
     WorkOutline,
     Report,
+    LocalOffer,
+    PersonAddAlt
 } from "@mui/icons-material";
-// import { Link } from "react-router-dom";
 import SidebarCSS from "./sidebar.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
+    const navLinkState = ({ isActive }) => isActive ? SidebarCSS.link + " " + SidebarCSS.active : SidebarCSS.link
+
     return (
         <div className={SidebarCSS.sidebar}>
             <div className={SidebarCSS.sidebarWrapper}>
                 <div className={SidebarCSS.sidebarMenu}>
                     <h3 className={SidebarCSS.sidebarTitle}>Dashboard</h3>
                     <ul className={SidebarCSS.sidebarList}>
-                        <Link to="/home" className={SidebarCSS.link}>
-                            <li className={SidebarCSS.sidebarListItem + " " + SidebarCSS.active}>
+                        <NavLink to="/home" className={navLinkState}>
+                            <li className={SidebarCSS.sidebarListItem}>
                                 <LineStyle className={SidebarCSS.sidebarIcon} />
                                 Home
                             </li>
-                        </Link>
-                        <li className={SidebarCSS.sidebarListItem}>
-                            <Timeline className={SidebarCSS.sidebarIcon} />
-                            Analytics
-                        </li>
-                        <li className={SidebarCSS.sidebarListItem}>
-                            <TrendingUp className={SidebarCSS.sidebarIcon} />
-                            Sales
-                        </li>
+                        </NavLink>
+                        <NavLink to="/home/analytics#analytics" className={navLinkState}>
+                            <li className={SidebarCSS.sidebarListItem}>
+                                <Timeline className={SidebarCSS.sidebarIcon} />
+                                Analytics
+                            </li>
+                        </NavLink>
+                        <NavLink to="/home/sales#sales" className={navLinkState}>
+                            <li className={SidebarCSS.sidebarListItem}>
+                                <TrendingUp className={SidebarCSS.sidebarIcon} />
+                                Sales
+                            </li>
+                        </NavLink>
                     </ul>
                 </div>
                 <div className={SidebarCSS.sidebarMenu}>
                     <h3 className={SidebarCSS.sidebarTitle}>Quick Menu</h3>
                     <ul className={SidebarCSS.sidebarList}>
-                        <Link to="/users" className={SidebarCSS.link}>
+                        <NavLink to="/users" className={navLinkState}>
                             <li className={SidebarCSS.sidebarListItem}>
                                 <PermIdentity className={SidebarCSS.sidebarIcon} />
                                 Users
                             </li>
-                        </Link>
-                        <Link to="/products" className={SidebarCSS.link}>
+                        </NavLink>
+                        <NavLink to="/new-user" className={navLinkState}>
+                            <li className={SidebarCSS.sidebarListItem}>
+                                <PersonAddAlt className={SidebarCSS.sidebarIcon} />
+                                New User
+                            </li>
+                        </NavLink>
+                        <NavLink to="/products" className={navLinkState}>
                             <li className={SidebarCSS.sidebarListItem}>
                                 <Storefront className={SidebarCSS.sidebarIcon} />
                                 Products
                             </li>
-                        </Link>
-                        <li className={SidebarCSS.sidebarListItem}>
-                            <AttachMoney className={SidebarCSS.sidebarIcon} />
-                            Transactions
-                        </li>
-                        <li className={SidebarCSS.sidebarListItem}>
-                            <BarChart className={SidebarCSS.sidebarIcon} />
-                            Reports
-                        </li>
+                        </NavLink>
+                        <NavLink to="/newproduct" className={navLinkState}>
+                            <li className={SidebarCSS.sidebarListItem}>
+                                <LocalOffer className={SidebarCSS.sidebarIcon} />
+                                New Product
+                            </li>
+                        </NavLink>
                     </ul>
                 </div>
                 <div className={SidebarCSS.sidebarMenu}>

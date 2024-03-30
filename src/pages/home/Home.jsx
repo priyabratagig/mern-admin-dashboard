@@ -11,8 +11,8 @@ const Home = () => {
 
     return (
         <>
-            <FeaturedInfo />
-            <Chart title="User Analytics" data={userChart} grid />
+            <FeaturedInfo id="sales" />
+            <Chart title="User Analytics" data={userChart} grid id="analytics" />
             <div className={HomeCSS.homeWidgets}>
                 <WidgetSm />
                 <WidgetLg />

@@ -9,10 +9,10 @@ import {
 import PropTypes from "prop-types";
 import ChartCSS from "./chart.module.css"
 
-const Chart = ({ title, data, grid }) => {
+const Chart = ({ title, data, grid, id }) => {
 
     return (
-        <div className={ChartCSS.chart}>
+        <div className={ChartCSS.chart} id={id}>
             <h3 className={ChartCSS.chartTitle}>{title}</h3>
             <ResponsiveContainer width="100%" aspect={4 / 1}>
                 <LineChart data={data}>
@@ -32,7 +32,8 @@ Chart.propTypes = {
         x: PropTypes.string.isRequired,
         y: PropTypes.number.isRequired,
     })).isRequired,
-    grid: PropTypes.bool.isRequired
+    grid: PropTypes.bool.isRequired,
+    id: PropTypes.string
 }
 
 export default Chart

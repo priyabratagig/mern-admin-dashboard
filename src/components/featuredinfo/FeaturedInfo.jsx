@@ -1,9 +1,10 @@
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
+import PropTypes from "prop-types";
 import FeaturedInfoCSS from "./featuredInfo.module.css";
 
-const FeaturedInfo = () => {
+const FeaturedInfo = ({ id }) => {
     return (
-        <div className={FeaturedInfoCSS.featured}>
+        <div className={FeaturedInfoCSS.featured} id={id}>
             <div className={FeaturedInfoCSS.featuredItem}>
                 <span className={FeaturedInfoCSS.featuredTitle}>Revanue</span>
                 <div className={FeaturedInfoCSS.featuredMoneyContainer}>
@@ -36,6 +37,10 @@ const FeaturedInfo = () => {
             </div>
         </div>
     )
+}
+
+FeaturedInfo.propTypes = {
+    id: PropTypes.string
 }
 
 export default FeaturedInfo

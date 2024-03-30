@@ -66,7 +66,26 @@ const initialState = {
             status: 'active',
             price: 1599
         }
-    ]
+    ].map((product, idx) => {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        let total = 0;
+        const sales = months.map(month => {
+            const sale = Math.floor(Math.random() * 100) * product.price;
+            total += sale;
+            return {
+                x: month,
+                y: sale
+            }
+        })
+
+        return {
+            ...product,
+            salesdata: sales,
+            salestotal: total.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'),
+            instock: product.stock ? 'Yes' : 'No',
+            id: idx + 1
+        }
+    })
 }
 
 const productsSlice = createSlice({

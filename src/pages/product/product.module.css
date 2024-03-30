@@ -1,0 +1,130 @@
+.product {
+  flex: 4;
+  margin: 2rem;
+}
+
+.productTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productAddButton {
+  width: 8rem;
+  border: none;
+  padding: 0.5rem;
+  background-color: teal;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+.productTop {
+  display: flex;
+}
+
+.productTopLeft,
+.productTopRight {
+  flex: 1;
+}
+
+.productTopRight {
+  padding: 2rem;
+  margin: 2rem;
+  -webkit-box-shadow: 0 0 1.5rem -1rem rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 1.5rem -1rem rgba(0, 0, 0, 0.75);
+}
+
+.productInfoImg {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 2rem;
+}
+
+.productInfoTop {
+  display: flex;
+  align-items: center;
+}
+
+.productName {
+  font-weight: 600;
+}
+
+.productInfoBottom {
+  margin-top: 1rem;
+}
+
+.productInfoItem {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productInfoValue {
+  font-weight: 300;
+}
+
+.productBottom {
+  padding: 2rem;
+  margin: 2rem;
+  -webkit-box-shadow: 0 0 1.5rem -1rem rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 1.5rem -1rem rgba(0, 0, 0, 0.75);
+}
+
+.productForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productFormLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.productFormLeft > label {
+  margin-bottom: 1rem;
+  color: gray;
+}
+
+.productFormLeft > input {
+  margin-bottom: 1rem;
+  border: none;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid gray;
+}
+
+.productFormLeft > select {
+  margin-bottom: 1rem;
+}
+
+.productUploadImg {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+  object-fit: contain;
+  margin-right: 2rem;
+}
+
+.productFormRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.productUpload {
+  display: flex;
+  align-items: center;
+}
+
+.productButton {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: darkblue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}

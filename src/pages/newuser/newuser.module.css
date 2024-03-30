@@ -6,6 +6,10 @@
   box-shadow: 0rem 0rem 1.5rem -1rem rgba(0, 0, 0, 0.75);
 }
 
+.newUserTitle {
+  font-size: 2em;
+}
+
 .newUserForm {
   display: grid;
   grid-template-columns: max-content max-content;

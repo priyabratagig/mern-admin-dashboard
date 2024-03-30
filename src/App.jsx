@@ -9,6 +9,8 @@ import UserList from './pages/userlist/UserList';
 import User from './pages/user/User';
 import NewUser from './pages/newuser/NewUser';
 import ProductList from './pages/productlist/ProductList';
+import Product from './pages/product/Product';
+import NewProduct from './pages/newproduct/NewProduct';
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -16,10 +18,14 @@ const routes = createBrowserRouter(
       <Route index element={<Navigate to='/home' />} />
       <Route path='/' element={<Layout />}>
         <Route path='home' element={<Home />} />
+        <Route path='home/analytics' element={<Home />} />
+        <Route path='home/sales' element={<Home />} />
         <Route path='users' element={<UserList />} />
         <Route path='user/:email' element={<User />} />
         <Route path="new-user" element={<NewUser />} />
         <Route path='products' element={<ProductList />} />
+        <Route path='product/:productName' element={<Product />} />
+        <Route path="newproduct" element={<NewProduct />} />
       </Route>
       <Route path='*' element={<Page404 />} />
     </Route>

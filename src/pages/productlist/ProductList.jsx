@@ -17,8 +17,8 @@ export default function ProductList() {
 
     const handleDelete = (name) => {
         setProducts(products.filter((item) => item.name !== name));
-        setFilterdProducts(filterdProducts.filter((item) => item.name !== name));
-    };
+        setFilterdProducts(filterdProducts.filter((item) => item.name !== name))
+    }
 
     const headCells = [
         { id: "Product", numeric: false, disablePadding: false, label: "Product", style: { maxWidth: "40rem", fontSize: "1.2rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" } },

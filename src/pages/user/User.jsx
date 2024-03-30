@@ -133,7 +133,7 @@ const User = () => {
                         </div>
                         <div className={UserCSS.userUpdateRight}>
                             <div className={UserCSS.userUpdateUpload}>
-                                <Avatar {...avatarConfig} className={UserCSS.userUpdateImg} />
+                                <Avatar {...avatarConfig} className={UserCSS.userUpdateImg} shape="rounded" />
                             </div>
                             <button type="button" className={UserCSS.userUpdateButton} onClick={updateUser}>Update</button>
                         </div>

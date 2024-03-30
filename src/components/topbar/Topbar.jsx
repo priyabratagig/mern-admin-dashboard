@@ -12,7 +12,9 @@ const Topbar = () => {
         <div className={TopbarCSS.topbar}>
             <div className={TopbarCSS.topbarWrapper}>
                 <div className={TopbarCSS.topLeft}>
-                    <span className={TopbarCSS.logo}>Stylight.admin</span>
+                    <Link to="/home">
+                        <span className={TopbarCSS.logo}>Stylight.admin</span>
+                    </Link>
                 </div>
                 <div className={TopbarCSS.topRight}>
                     <div className={TopbarCSS.topbarIconContainer}>
