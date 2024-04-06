@@ -63,3 +63,13 @@
   margin-top: 3rem;
   cursor: pointer;
 }
+
+@media screen and (max-width: 76.8rem) {
+  .newUserForm {
+    grid-template-columns: max-content;
+  }
+
+  .newUserItem {
+    width: 30rem;
+  }
+}

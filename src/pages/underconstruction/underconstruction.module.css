@@ -1,0 +1,20 @@
+.underconstruction {
+  flex: 4;
+  margin: 2rem;
+  padding: 2rem;
+  -webkit-box-shadow: 0rem 0rem 1.5rem -1rem rgba(0, 0, 0, 0.75);
+  box-shadow: 0rem 0rem 1.5rem -1rem rgba(0, 0, 0, 0.75);
+}
+
+.underconstruction > h1 {
+  color: #a7a7be;
+  text-align: center;
+  font-size: 2em;
+}
+
+.underconstructionIcon {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 6rem;
+  color: #6d6c6c;
+}

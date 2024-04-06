@@ -9,3 +9,9 @@
   margin-bottom: 2rem;
   font-size: 1.8em;
 }
+
+@media screen and (max-width: 76.8rem) {
+  .chart {
+    margin: 2rem 3rem;
+  }
+}

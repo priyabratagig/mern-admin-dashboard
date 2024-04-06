@@ -11,6 +11,8 @@ import NewUser from './pages/newuser/NewUser';
 import ProductList from './pages/productlist/ProductList';
 import Product from './pages/product/Product';
 import NewProduct from './pages/newproduct/NewProduct';
+import EmailSettings from './pages/emailsettings/EmailSettings';
+import UnderConstruction from './pages/underconstruction/UnderConstruction';
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +28,12 @@ const routes = createBrowserRouter(
         <Route path='products' element={<ProductList />} />
         <Route path='product/:productName' element={<Product />} />
         <Route path="newproduct" element={<NewProduct />} />
+        <Route path='emailsettings' element={<EmailSettings />} />
+        <Route path='feedbacksettings' element={<UnderConstruction />} />
+        <Route path='messagesettings' element={<UnderConstruction />} />
+        <Route path='managestuffs' element={<UnderConstruction />} />
+        <Route path='analytics' element={<UnderConstruction />} />
+        <Route path='reports' element={<UnderConstruction />} />
       </Route>
       <Route path='*' element={<Page404 />} />
     </Route>
