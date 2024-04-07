@@ -2,6 +2,7 @@ import { Navigate, Route, RouterProvider, createBrowserRouter, createRoutesFromE
 import { Provider } from 'react-redux';
 import store from './redux';
 import Page404 from './pages/page404/Page404';
+import UnderConstruction from './pages/underconstruction/UnderConstruction';
 import Layout from './pages/layout/Layout';
 import Home from './pages/home/Home';
 import './App.css';
@@ -12,7 +13,7 @@ import ProductList from './pages/productlist/ProductList';
 import Product from './pages/product/Product';
 import NewProduct from './pages/newproduct/NewProduct';
 import EmailSettings from './pages/emailsettings/EmailSettings';
-import UnderConstruction from './pages/underconstruction/UnderConstruction';
+import StuffList from './pages/stuffs/StuffList';
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +32,7 @@ const routes = createBrowserRouter(
         <Route path='emailsettings' element={<EmailSettings />} />
         <Route path='feedbacksettings' element={<UnderConstruction />} />
         <Route path='messagesettings' element={<UnderConstruction />} />
-        <Route path='managestuffs' element={<UnderConstruction />} />
+        <Route path='managestuffs' element={<StuffList />} />
         <Route path='analytics' element={<UnderConstruction />} />
         <Route path='reports' element={<UnderConstruction />} />
       </Route>

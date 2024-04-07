@@ -52,7 +52,7 @@
 
 .toggleSideBar {
   position: absolute;
-  top: 1rem;
+  top: 0rem;
   right: -3rem;
   padding: 0.5rem;
   cursor: pointer;

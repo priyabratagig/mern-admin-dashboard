@@ -128,3 +128,42 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+@media screen and (max-width: 76.8rem) {
+  .productTop {
+    flex-direction: column;
+  }
+
+  .productTopRight {
+    margin: 1rem;
+  }
+
+  .productTopLeft > *:first-child {
+    margin: 1rem;
+  }
+
+  .productInfoTop {
+    justify-content: space-between;
+  }
+
+  .productInfoItem {
+    width: unset;
+  }
+
+  .productBottom {
+    margin: 1rem;
+  }
+
+  .productForm {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .productFormRight {
+    row-gap: 2rem;
+  }
+
+  .productUpload {
+    justify-content: center;
+  }
+}
